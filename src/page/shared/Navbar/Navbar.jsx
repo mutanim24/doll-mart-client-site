@@ -15,7 +15,7 @@ const Navbar = () => {
         <li><Link to='/all-toys'>All Toys</Link></li>
         <li><a href="">My Toys</a></li>
         <li><a href="">Add Toys</a></li>
-        <li><a href="">Blog</a></li>
+        <li><Link to='/blog'>Blog</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
