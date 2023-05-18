@@ -12,7 +12,7 @@ const Navbar = () => {
     }
     const menuBar = <>
         <li><Link to='/'>Home</Link></li>
-        <li><a href=''>All Toys</a></li>
+        <li><Link to='/all-toys'>All Toys</Link></li>
         <li><a href="">My Toys</a></li>
         <li><a href="">Add Toys</a></li>
         <li><a href="">Blog</a></li>
