@@ -1,0 +1,27 @@
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+
+const SingleProduct = () => {
+    const product = useLoaderData();
+    const { img, name, seller, price, rating, quantity, description } = product;
+    return (
+        <div className='p-14'>
+            <div className='p-8 shadow-xl flex gap-5 rounded'>
+                <img className='w-5/12 border-8 border-double border-pink-600' src={img} alt="" />
+                <div className='w-7/12 space-y-3 mt-5 relative'>
+                    <h1 className='font-bold text-5xl'>{name}</h1>
+                    <p className='text-2xl font-semibold'>Price: ${price}</p>
+                    <p>Available quantity: {quantity}</p>
+                    <p>{description}</p>
+                    <div className=''>
+                        <h3>Seller: {seller.name}</h3>
+                        <h3>Seller Email: {seller.email}</h3>
+                    </div>
+                    <button className='btn bg-pink-600 w-full my-5 absolute mb-0'>Add to cart</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SingleProduct;

@@ -1,13 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Login = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
     const { signInUser, setUser, googleLogin } = useContext(AuthContext)
+    const location = useLocation();
+    // const from = 
 
 
     const handleLogin = (event) => {

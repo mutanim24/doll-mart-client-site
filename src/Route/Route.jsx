@@ -9,6 +9,8 @@ import Login from "../page/Login/Login";
 import AllToys from "../page/AllToys/AllToys";
 import FourZeroFour from "../page/FourZeroFour/FourZeroFour";
 import Blog from "../page/Blog/Blog";
+import SingleProduct from "../page/SingleProduct/SingleProduct";
+import PrivateRoute from "./PrivateRoute";
 
   export const router = createBrowserRouter([
     {
@@ -24,6 +26,11 @@ import Blog from "../page/Blog/Blog";
           path: '/all-toys',
           element: <AllToys></AllToys>,
           loader: () => fetch('http://localhost:5000/products')
+        },
+        {
+          path: '/products/:id',
+          element: <PrivateRoute><SingleProduct></SingleProduct></PrivateRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
         },
         {
           path: '/blog',
