@@ -36,7 +36,11 @@ const Register = () => {
                 })
                     .then(() => {
                         form.reset();
+                        setSuccess("Successfully registered")
                     });
+            })
+            .catch(err => {
+                setError(err.message)
             })
     }
 

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { Result } from 'postcss';
+import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
-    const {signInUser, setUser, googleLogin} = useContext(AuthContext)
+    const { signInUser, setUser, googleLogin } = useContext(AuthContext)
 
 
     const handleLogin = (event) => {
@@ -16,31 +16,34 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        signInUser()
-        .then(result => {
-            const user = result.user;
-            setUser(user)
-        })
-        .catch(err => {
-            console.log(err.message)
-        })
+        setError("");
+        setSuccess("");
+        signInUser(email, password)
+            .then(result => {
+                const user = result.user;
+                setUser(user)
+                setSuccess("Logged in successfully")
+            })
+            .catch(err => {
+                setError(err.message)
+            })
 
     }
 
-    const loginGoogleHandle =() => {
+    const loginGoogleHandle = () => {
         googleLogin()
-        .then(result => {
-            setUser(result.user)
-        })
-        .catch(err => {
-            setError(err.message)
-        })
+            .then(result => {
+                setUser(result.user)
+            })
+            .catch(err => {
+                setError(err.message)
+            })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col md:w-6/12">
                 <div className="text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold">Register now!</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold">Login now!</h1>
                 </div>
                 <div className="card flex-shrink-0 md:w-8/12 shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body">
@@ -57,14 +60,14 @@ const Login = () => {
                             <input name='password' type="password" placeholder="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                            <input className='btn bg-pink-600' type="submit" value="Register" />
+                            <input className='btn bg-pink-600' type="submit" value="Log In" />
                         </div>
                         <label className="label">
                             <p className='text-red-600'><small>{error}</small></p>
                             <p className='text-green-600'><small>{success}</small></p>
                         </label>
                         <label className="label">
-                            <Link to='/login' className="label-text-alt link link-hover">Already have an account</Link>
+                            <Link to='/register' className="label-text-alt link link-hover">New at DollMart</Link>
                         </label>
                         <div className="divider">OR</div>
                         <button onClick={loginGoogleHandle} className='flex items-center justify-center gap-2 btn bg-pink-600'>
