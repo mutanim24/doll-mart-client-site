@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductRow = ({product}) => {
-    const {_id, img, name, category, price, quantity, seller} = product;
+const MyToysRow = ({ toy }) => {
+    const { _id, img, name, category, price, quantity, seller } = toy;
     return (
         <tr className=''>
+            <th>
+                <label>
+                    <input type="checkbox" className="checkbox" />
+                </label>
+            </th>
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
@@ -25,10 +30,10 @@ const ProductRow = ({product}) => {
             </td>
             <td>$ {price}</td>
             <th>
-               <Link to={`/products/${_id}`} className="btn bg-pink-600 btn-sm">View Details</Link>
+                <Link to={`/products/${_id}`} className="btn bg-pink-600 btn-sm">View Details</Link>
             </th>
         </tr>
     );
 };
 
-export default ProductRow;
+export default MyToysRow;

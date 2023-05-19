@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CategoryDoll = ({ doll }) => {
     const {_id, img, name, price, rating } = doll;
-    console.log(doll)
+    // console.log(doll)
     return (
         <div className='shadow-lg flex flex-col'>
             <img className='w-80 h-80 m-auto' src={img} alt='' />
