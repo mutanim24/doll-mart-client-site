@@ -6,12 +6,12 @@ const Footer = () => {
         <div>
             <footer className="footer p-10 bg-base-200 text-base-content">
                 <div className="space-y-2 flex items-center">
-                    <img src={logo} className="w-6/12" alt="Company Logo" />
+                    <img src={logo} className="w-4/12" alt="Company Logo" />
                     <p className="font-semibold">Doll Mart<br />Providing reliable tech since 2002<br />Address: 456 Street, Dhaka, BAngladesh</p>
                 </div>
                 <div>
                     <span className="footer-title">Contact</span>
-                    <p>456 Street, Dhaka,<br /> BAngladesh</p>
+                    <p>456 Street, Dhaka,<br /> Bangladesh</p>
                     <p>Phone: 123-456-7890</p>
                     <p>Email:info@dollmart.com</p>
                 </div>

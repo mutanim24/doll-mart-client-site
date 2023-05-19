@@ -12,6 +12,7 @@ import Blog from "../page/Blog/Blog";
 import SingleProduct from "../page/SingleProduct/SingleProduct";
 import PrivateRoute from "./PrivateRoute";
 import AddToy from "../page/AddToy/AddToy";
+import MyToys from "../page/MyToys/MyToys";
 
   export const router = createBrowserRouter([
     {
@@ -29,13 +30,17 @@ import AddToy from "../page/AddToy/AddToy";
           loader: () => fetch('http://localhost:5000/products')
         },
         {
+          path: '/my-toys',
+          element: <MyToys></MyToys>
+        },
+        {
           path: '/products/:id',
           element: <PrivateRoute><SingleProduct></SingleProduct></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
         },
         {
           path: '/add-toy',
-          element: <AddToy></AddToy>
+          element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
         },
         {
           path: '/blog',

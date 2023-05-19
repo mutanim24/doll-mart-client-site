@@ -5,21 +5,8 @@ const Blog = () => {
 
     return (
         <div>
-            <div className="banner relative">
-                <div className='bg-fixed' style={{
-                    backgroundImage: `url(${bg})`,
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    height: '150px'
-                }}>
-
-                </div>
-                <div className="banner-content absolute top-0 bg-black h-[150px] w-full bg-opacity-70 text-center pt-10">
-                    <div className='text-white text-center'>
-                        <h1 className='text-3xl font-bold mb-5'>Blogs</h1>
-                        <p className='font-semibold'>Now more about React, Back-end & Authentication</p>
-                    </div>
-                </div>
+            <div className='p-10 bg-pink-100 rounded shadow-lg'>
+                <h1 className='text-5xl font-bold text-pink-600 text-center'>Blog</h1>
             </div>
             <div className='px-6 md:px-14 grid md:grid-cols-2 gap-6 my-10'>
                 <div className="card w-full bg-base-100 shadow-xl">

@@ -14,7 +14,7 @@ const Navbar = () => {
     const menuBar = <>
         <li className='font-bold'><Link to='/'>Home</Link></li>
         <li className='font-bold'><Link to='/all-toys'>All Toys</Link></li>
-        <li className='font-bold'><a href="">My Toys</a></li>
+        <li className='font-bold'><Link to='/my-toys'>My Toys</Link></li>
         <li className='font-bold'><Link to='/add-toy'>Add Toys</Link></li>
         <li className='font-bold'><Link to='/blog'>Blog</Link></li>
     </>

@@ -6,11 +6,11 @@ const AllToys = () => {
     const products = useLoaderData();
     console.log(products)
     return (
-        <div className='px-14'>
+        <div>
             <div className='p-10 bg-pink-100 rounded shadow-lg'>
                 <h1 className='text-5xl font-bold text-pink-600 text-center'>All Toys</h1>
             </div>
-            <div className='mx-auto my-8'>
+            <div className='mx-auto my-4 p-14'>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
                         {/* head */}
