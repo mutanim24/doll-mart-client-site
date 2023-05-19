@@ -7,8 +7,8 @@ const AllToys = () => {
     console.log(products)
     return (
         <div className='px-14'>
-            <div className='p-5 bg-pink-100 rounded shadow-lg'>
-                <h1 className='text-4xl font-bold text-pink-600'>All Toys</h1>
+            <div className='p-10 bg-pink-100 rounded shadow-lg'>
+                <h1 className='text-5xl font-bold text-pink-600 text-center'>All Toys</h1>
             </div>
             <div className='mx-auto my-8'>
                 <div className="overflow-x-auto w-full">

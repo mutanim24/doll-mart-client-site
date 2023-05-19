@@ -1,21 +1,22 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import logo from '../../../assets/logo.png'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogout = () => {
         logOut()
-        .then(() => {})
-        .catch(err => {console.log(err.message)})
+            .then(() => { })
+            .catch(err => { console.log(err.message) })
     }
     const menuBar = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/all-toys'>All Toys</Link></li>
-        <li><a href="">My Toys</a></li>
-        <li><a href="">Add Toys</a></li>
-        <li><Link to='/blog'>Blog</Link></li>
+        <li className='font-bold'><Link to='/'>Home</Link></li>
+        <li className='font-bold'><Link to='/all-toys'>All Toys</Link></li>
+        <li className='font-bold'><a href="">My Toys</a></li>
+        <li className='font-bold'><Link to='/add-toy'>Add Toys</Link></li>
+        <li className='font-bold'><Link to='/blog'>Blog</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -28,7 +29,10 @@ const Navbar = () => {
                         {menuBar}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">DollMart</a>
+                <Link to='/' className='flex gap-1 items-center'>
+                    <img className='w-12' src={logo} alt="" />
+                    <h2 className='font-bold text-2xl'>DollMart</h2>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

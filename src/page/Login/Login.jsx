@@ -1,15 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
     const { signInUser, setUser, googleLogin } = useContext(AuthContext)
+    const navigate = useNavigate();
     const location = useLocation();
-    // const from = 
+    const from = location.state?.from?.pathname || '/';
+    console.log(location)
 
 
     const handleLogin = (event) => {
@@ -25,6 +27,7 @@ const Login = () => {
                 const user = result.user;
                 setUser(user)
                 setSuccess("Logged in successfully")
+                navigate(from, {replace: true})
             })
             .catch(err => {
                 setError(err.message)

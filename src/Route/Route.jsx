@@ -11,6 +11,7 @@ import FourZeroFour from "../page/FourZeroFour/FourZeroFour";
 import Blog from "../page/Blog/Blog";
 import SingleProduct from "../page/SingleProduct/SingleProduct";
 import PrivateRoute from "./PrivateRoute";
+import AddToy from "../page/AddToy/AddToy";
 
   export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ import PrivateRoute from "./PrivateRoute";
           path: '/products/:id',
           element: <PrivateRoute><SingleProduct></SingleProduct></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        },
+        {
+          path: '/add-toy',
+          element: <AddToy></AddToy>
         },
         {
           path: '/blog',
