@@ -4,8 +4,10 @@ import About from '../About/About';
 import TabSection from '../TabSection/TabSection';
 import Gallery from '../Gallery/Gallery';
 import Banner from '../Banner/Banner';
+import { useTitle } from '../../../hooks/useTitle';
 
 const Home = () => {
+    useTitle("Home")
     return (
         <div>
             <Banner></Banner>

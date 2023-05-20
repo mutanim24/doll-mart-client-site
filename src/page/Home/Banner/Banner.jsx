@@ -17,8 +17,8 @@ const Banner = () => {
                     <h1 className='text-4xl md:text-6xl font-bold mb-4'><span className='text-pink-600'>DollMart</span>, Where Doll Dreams Come True</h1>
                     <p>Discover a Magical Collection of Dolls and Accessories</p>
                     <div className='my-8'>
-                        <button className="btn bg-pink-600 mx-3">Dolls For Girls</button>
-                        <button className="btn bg-pink-600 mx-3">Dolls For Boys</button>
+                        <button className="btn bg-pink-600 mx-3">Doll For Girls</button>
+                        <button className="btn bg-pink-600 mx-3">Doll For Boys</button>
                     </div>
                 </div>
             </div>

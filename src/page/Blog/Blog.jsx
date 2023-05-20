@@ -1,8 +1,9 @@
 import React from 'react';
 import bg from '../../assets/react.png'
+import { useTitle } from '../../hooks/useTitle';
 
 const Blog = () => {
-
+    useTitle("Blog")
     return (
         <div>
             <div className='p-10 bg-pink-100 rounded shadow-lg'>

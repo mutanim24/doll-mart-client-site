@@ -6,13 +6,13 @@ import about4 from '../../../assets/about-4.jpg';
 
 const About = () => {
     return (
-        <div className='my-16 px-14'>
+        <div className='my-16 px-6 md:px-14'>
             <div className='text-center mb-6'>
                 <h1 className='text-3xl md:text-5xl font-bold mb-2 md:mb-4'>About Us</h1>
                 <p className='text-sm md:text-base'>We make your children happier
                     with the best toys</p>
             </div>
-            <div className='grid grid-cols-4 gap-4'>
+            <div className='grid md:grid-cols-4 gap-4'>
                 <div className='text-center p-10 rounded shadow-xl space-y-3'>
                     <img className='mx-auto' src={about1} alt="" />
                     <h1 className='text-2xl font-bold'>Big Selection</h1>

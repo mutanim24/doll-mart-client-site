@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { useTitle } from '../../hooks/useTitle';
 
 const Register = () => {
+    useTitle("Register")
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 

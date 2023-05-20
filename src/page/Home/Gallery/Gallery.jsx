@@ -15,7 +15,7 @@ const Gallery = () => {
                 <h1 className='text-3xl md:text-5xl font-bold mb-2 md:mb-4'>Dolls Gallery</h1>
                 <p className='text-sm md:text-base'> A Captivating Showcase of Exquisite Dolls</p>
             </div>
-            <div className='grid grid-cols-4 p-8 border-dotted rounded border-pink-500 border-8'>
+            <div className='grid grid-cols-2 md:grid-cols-4 p-4 md:p-8 border-dotted rounded border-pink-500 border-8'>
                 <div className="shadow-xl">
                     <figure><img className='hover:animate-ping border-pink-600' src={doll1} alt="dolls" /></figure>
                 </div>

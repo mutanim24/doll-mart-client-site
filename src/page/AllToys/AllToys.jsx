@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ProductRow from './ProductRow';
+import { useTitle } from '../../hooks/useTitle';
 
 const AllToys = () => {
+    useTitle("All Toys")
     const products = useLoaderData();
     // console.log(products)
     return (

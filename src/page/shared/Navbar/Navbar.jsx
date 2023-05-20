@@ -14,12 +14,15 @@ const Navbar = () => {
     const menuBar = <>
         <li className='font-bold'><Link to='/'>Home</Link></li>
         <li className='font-bold'><Link to='/all-toys'>All Toys</Link></li>
-        <li className='font-bold'><Link to='/my-toys'>My Toys</Link></li>
-        <li className='font-bold'><Link to='/add-toy'>Add Toys</Link></li>
+        {
+            user && <><li className='font-bold'><Link to='/my-toys'>My Toys</Link></li>
+            <li className='font-bold'><Link to='/add-toy'>Add Toys</Link></li></>
+        }
+
         <li className='font-bold'><Link to='/blog'>Blog</Link></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 md:px-14">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,7 +34,7 @@ const Navbar = () => {
                 </div>
                 <Link to='/' className='flex gap-1 items-center'>
                     <img className='w-12' src={logo} alt="" />
-                    <h2 className='font-bold text-2xl'>DollMart</h2>
+                    <h2 className='font-bold text-2xl hidden md:block'>DollMart</h2>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
