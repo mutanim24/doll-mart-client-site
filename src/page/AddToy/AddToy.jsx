@@ -33,7 +33,13 @@ const AddToy = () => {
         .then(data => {
             console.log(data)
             if(data.acknowledged){
-                Swal.fire('Added toys successfully')
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Added Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
         })
     }
@@ -43,13 +49,13 @@ const AddToy = () => {
             <div className='p-10 bg-pink-100 rounded shadow-lg'>
                 <h1 className='text-5xl font-bold text-pink-600 text-center'>Add Toys</h1>
             </div>
-            <form onSubmit={handleAddProduct} className='m-14 p-8 rounded shadow-lg'>
-                <div className='grid grid-cols-2 gap-5'>
+            <form onSubmit={handleAddProduct} className='m-6 md:m-14 p-8 rounded shadow-lg'>
+                <div className='grid md:grid-cols-2 gap-5'>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Toys Name</span>
                         </label>
-                        <input name='name' type="text" placeholder="toy name" className="input input-bordered input-secondary w-full" />
+                        <input required name='name' type="text" placeholder="toy name" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">

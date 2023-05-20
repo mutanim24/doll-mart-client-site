@@ -7,7 +7,7 @@ const UpdateProduct = () => {
     console.log(product)
     const { _id, name, img, description, price, quantity } = product;
 
-    const handleAddProduct = event => {
+    const handleUpdateProduct = event => {
 
         event.preventDefault();
         const form = event.target;
@@ -42,10 +42,10 @@ const UpdateProduct = () => {
     return (
         <div className=''>
             <div className='p-10 bg-pink-100 rounded shadow-lg'>
-                <h1 className='text-5xl font-bold text-pink-600 text-center'>Update Toys</h1>
+                <h1 className='text-3xl md:text-5xl font-bold text-pink-600 text-center'>Update Toys</h1>
             </div>
-            <form onSubmit={handleAddProduct} className='m-14 p-8 rounded shadow-lg'>
-                <div className='grid grid-cols-2 gap-5'>
+            <form onSubmit={handleUpdateProduct} className='m-6 md:m-14 p-8 rounded shadow-lg'>
+                <div className='grid md:grid-cols-2 gap-5'>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Toys Name</span>
