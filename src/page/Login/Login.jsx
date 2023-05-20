@@ -39,6 +39,7 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 setUser(result.user)
+                navigate(from, {replace: true})
             })
             .catch(err => {
                 setError(err.message)

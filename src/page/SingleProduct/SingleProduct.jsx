@@ -24,7 +24,7 @@ const SingleProduct = () => {
                             <h3>Seller: {seller.name}</h3>
                             <h3>Seller Email: {seller.email}</h3>
                         </div>
-                        <button class='btn bg-pink-600 w-full my-5 absolute mb-0 bottom-0'>Add to cart</button>
+                        <button class='btn bg-pink-600 w-full absolute mb-0 bottom-0'>Add to cart</button>
                     </div>
                 </div>
             </div>

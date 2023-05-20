@@ -1,12 +1,14 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 import { useLoaderData } from 'react-router-dom';
 
 const UpdateProduct = () => {
     const product = useLoaderData();
     console.log(product)
-    const {_id, name, img, description, price, quantity } = product;
+    const { _id, name, img, description, price, quantity } = product;
 
     const handleAddProduct = event => {
+
         event.preventDefault();
         const form = event.target;
         const img = form.photo.value;
@@ -25,7 +27,15 @@ const UpdateProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if (data.acknowledged) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Updated Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
             })
     }
 
@@ -60,7 +70,7 @@ const UpdateProduct = () => {
                         </label>
                         <input defaultValue={quantity} name='quantity' type="number" placeholder="quantity" className="input input-bordered input-secondary w-full" />
                     </div>
-                    
+
 
                 </div>
                 <div className="form-control my-5">

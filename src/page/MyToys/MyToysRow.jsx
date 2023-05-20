@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const MyToysRow = ({ toy }) => {
+const MyToysRow = ({ toy, handleDelete }) => {
     const { _id, img, name, category, price, quantity, seller } = toy;
-    const [control, setControl] = useState(false);
+    
 
-    const handleDelete = id => {
-        fetch(`http://localhost:5000/my-toys/${id}`,{
-            method: "DELETE"
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        })
-    }
+    
     return (
         <tr>
             <th>

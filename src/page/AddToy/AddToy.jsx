@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Swal from 'sweetalert2'
+
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const AddToy = () => {
+    const {user} = useContext(AuthContext)
+    
     const handleAddProduct = event => {
         event.preventDefault();
         const form = event.target;
@@ -25,6 +30,9 @@ const AddToy = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            if(data.acknowledged){
+                Swal.fire('Added toys successfully')
+            }
         })
     }
 
@@ -75,13 +83,13 @@ const AddToy = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Seller Name</span>
                         </label>
-                        <input name='sellerName' type="text" placeholder="seller name" className="input input-bordered input-secondary w-full" />
+                        <input defaultValue={user.displayName} name='sellerName' type="text" placeholder="seller name" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Seller email</span>
                         </label>
-                        <input name='sellerEmail' type="email" placeholder="email" className="input input-bordered input-secondary w-full" />
+                        <input defaultValue={user.email} name='sellerEmail' type="email" placeholder="email" className="input input-bordered input-secondary w-full" />
                     </div>
 
                 </div>
