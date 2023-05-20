@@ -1,4 +1,6 @@
 import React from 'react';
+import Rating from '@mui/material/Rating';
+
 import { useLoaderData } from 'react-router-dom';
 import { useTitle } from '../../hooks/useTitle';
 
@@ -17,7 +19,7 @@ const SingleProduct = () => {
                     <div class='w-7/12 space-y-3 relative p-3'>
                         <h1 class='font-bold text-5xl'>{name}</h1>
                         <p class='text-2xl font-semibold'>Price: ${price}</p>
-                        <p>Rating: {rating}</p>
+                        <p className='flex gap-2 items-center'><Rating name="half-rating-read" defaultValue={rating} precision={0.1} readOnly /> {rating}</p>
                         <p>{description}</p>
                         <p className='font-semibold'>Available quantity: {quantity}</p>
                         <div class='border border-2 p-5 rounded space-y-2'>
