@@ -12,14 +12,18 @@ const Navbar = () => {
             .catch(err => { console.log(err.message) })
     }
     const menuBar = <>
-        <li className='font-bold'><Link to='/'>Home</Link></li>
-        <li className='font-bold'><Link to='/all-toys'>All Toys</Link></li>
+        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/'>Home</NavLink></li>
+        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/all-toys'>All Toys</NavLink></li>
         {
-            user && <><li className='font-bold'><Link to='/my-toys'>My Toys</Link></li>
-            <li className='font-bold'><Link to='/add-toy'>Add Toys</Link></li></>
+            user && <><li className='font-bold'>
+                <NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/my-toys'>My Toys</NavLink>
+            </li>
+                <li className='font-bold'>
+                    <NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/add-toy'>Add Toys</NavLink>
+                </li></>
         }
 
-        <li className='font-bold'><Link to='/blog'>Blog</Link></li>
+        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/blog'>Blog</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 md:px-14">
