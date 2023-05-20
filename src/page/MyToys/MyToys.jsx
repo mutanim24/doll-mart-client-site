@@ -7,9 +7,7 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my-toys?email=${user?.email}`, {
-            method: "GET"
-        })
+        fetch(`http://localhost:5000/my-toys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data)
@@ -29,13 +27,14 @@ const MyToys = () => {
                             <tr>
                                 <th>
                                     <label>
-                                        <input type="checkbox" className="checkbox" />
+                                        Delete
                                     </label>
                                 </th>
                                 <th>Products</th>
                                 <th>Category</th>
                                 <th>Price</th>
                                 <th>Details</th>
+                                <th>Update</th>
                             </tr>
                         </thead>
                         <tbody>

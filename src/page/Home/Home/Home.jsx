@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import banner from '../../../assets/doll-banner.jpg'
-import fashion from '../../../assets/fashion-fun.jpg'
-import doll1 from '../../../assets/doll-1.jpg'
-import doll2 from '../../../assets/doll-2.jpg'
-import doll3 from '../../../assets/doll-3.jpg'
-import doll4 from '../../../assets/doll-4.jpg'
-import doll5 from '../../../assets/doll-5.jpg'
-import doll6 from '../../../assets/doll-6.jpg'
-import doll7 from '../../../assets/doll-7.jpg'
-import doll8 from '../../../assets/fashion-fun.jpg'
+import banner from '../../../assets/doll-banner.jpg';
+import fashion from '../../../assets/fashion-fun.jpg';
+import doll1 from '../../../assets/doll-1.jpg';
+import doll2 from '../../../assets/doll-2.jpg';
+import doll3 from '../../../assets/doll-3.jpg';
+import doll4 from '../../../assets/doll-4.jpg';
+import doll5 from '../../../assets/doll-5.jpg';
+import doll6 from '../../../assets/doll-6.jpg';
+import doll7 from '../../../assets/doll-7.jpg';
 import CategoryDoll from '../CategoryDoll/CategoryDoll';
+import about1 from '../../../assets/about-1.jpg';
+import about2 from '../../../assets/about-2.jpg';
+import about3 from '../../../assets/about-3.jpg';
+import about4 from '../../../assets/about-4.jpg';
 
 const Home = () => {
     const [dolls, setDolls] = useState([]);
@@ -33,7 +36,7 @@ const Home = () => {
         if (category === "All") {
             return (
                 <div className='grid grid-cols-3 gap-7 mt-9'>
-                    {dolls.slice(0, 10).map((doll) => <CategoryDoll key={doll._id} doll={doll}></CategoryDoll>)}
+                    {dolls.slice(0, 6).map((doll) => <CategoryDoll key={doll._id} doll={doll}></CategoryDoll>)}
                 </div>
             )
         }
@@ -125,6 +128,68 @@ const Home = () => {
                     <TabPanel>{renderCategoryData('Action Figures')}</TabPanel>
                 </Tabs>
 
+            </div>
+
+            <div className='my-12 px-14'>
+                <div className='text-center mb-6'>
+                    <h1 className='text-3xl md:text-5xl font-bold mb-2 md:mb-4'>About Us</h1>
+                    <p className='text-sm md:text-base'>We make your children happier
+                        with the best toys</p>
+                </div>
+                <div className='grid grid-cols-4 gap-4'>
+                    <div className='text-center p-10 rounded shadow-xl space-y-3'>
+                        <img className='mx-auto' src={about1} alt="" />
+                        <h1 className='text-2xl font-bold'>Big Selection</h1>
+                        <p>The widest toy range.</p>
+                    </div>
+                    <div className='text-center p-10 rounded shadow-xl space-y-3'>
+                        <img className='mx-auto' src={about2} alt="" />
+                        <h1 className='text-2xl font-bold'>Online Store</h1>
+                        <p>Easiest online shopping.</p>
+                    </div>
+                    <div className='text-center p-10 rounded shadow-xl space-y-3'>
+                        <img className='mx-auto' src={about3} alt="" />
+                        <h1 className='text-2xl font-bold'>Delivery</h1>
+                        <p>Fast and easy delivery.</p>
+                    </div>
+                    <div className='text-center p-10 rounded shadow-xl space-y-3'>
+                        <img className='mx-auto' src={about4} alt="" />
+                        <h1 className='text-2xl font-bold'>Support</h1>
+                        <p>Call our awesome team.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='my- 10 p-14 bg-pink-700 flex gap-5 items-center'>
+                <div className='w-4/12 text-white space-y-4'>
+                    <h4 className='font-semibold'>Testimonial</h4>
+                    <h1 className='text-5xl font-bold'>What Our Client Says About Us</h1>
+                    <button className='btn bg-white text-pink-600 hover:bg-pink-800 hover:text-white rounded-full mt-4'>About Us</button>
+                </div>
+                <div className='grid grid-cols-2 gap-8 w-8/12'>
+                    <div className='rounded-2xl shadow-xl p-12 bg-white'>
+                        <h1 className='text-6xl'>❝</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores obcaecati magnam odio ad numquam modi.</p>
+                        <div className='flex items-center justify-center gap-3 mt-4'>
+                            <img className='rounded-full w-16 h-16' src={about1} alt="" />
+                            <div>
+                                <h4 className='font-bold'>Tanjil Rahat</h4>
+                                <p>CEO, Tanjil tech</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='rounded-2xl shadow-xl p-12 bg-white mt-6'>
+                        <h1 className='text-6xl'>❝</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores obcaecati magnam odio ad numquam modi.</p>
+                        <div className='flex items-center justify-center gap-3 mt-4'>
+                            <img className='rounded-full w-16 h-16' src={about1} alt="" />
+                            <div className='mt-4'>
+                                <h4 className='font-bold'>Tanjil Rahat</h4>
+                                <p>CEO, Tanjil tech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

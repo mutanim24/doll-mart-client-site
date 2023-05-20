@@ -4,7 +4,7 @@ import ProductRow from './ProductRow';
 
 const AllToys = () => {
     const products = useLoaderData();
-    console.log(products)
+    // console.log(products)
     return (
         <div>
             <div className='p-10 bg-pink-100 rounded shadow-lg'>
