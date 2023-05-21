@@ -28,7 +28,7 @@ import UpdateProduct from "../page/UpdateProduct/UpdateProduct";
         {
           path: '/all-toys',
           element: <AllToys></AllToys>,
-          loader: () => fetch('http://localhost:5000/products')
+          loader: () => fetch('https://doll-mart-server.vercel.app/products')
         },
         {
           path: '/my-toys',
@@ -37,7 +37,7 @@ import UpdateProduct from "../page/UpdateProduct/UpdateProduct";
         {
           path: '/products/:id',
           element: <PrivateRoute><SingleProduct></SingleProduct></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+          loader: ({params}) => fetch(`https://doll-mart-server.vercel.app/products/${params.id}`)
         },
         {
           path: '/add-toy',
@@ -46,7 +46,7 @@ import UpdateProduct from "../page/UpdateProduct/UpdateProduct";
         {
           path: '/update/:id',
           element: <UpdateProduct></UpdateProduct>,
-          loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+          loader: ({params}) => fetch(`https://doll-mart-server.vercel.app/update/${params.id}`)
         },
         {
           path: '/blog',

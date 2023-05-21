@@ -22,7 +22,7 @@ const AddToy = () => {
         const description = form.description.value;
         const newProduct = {img, name, category, seller: {name: sellerName, email: sellerEmail}, price, rating, quantity, description};
 
-        fetch('http://localhost:5000/add-product', {
+        fetch('https://doll-mart-server.vercel.app/add-product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

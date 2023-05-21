@@ -13,7 +13,7 @@ const TabSection = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://doll-mart-server.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 setDolls(data)

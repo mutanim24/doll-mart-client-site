@@ -19,7 +19,7 @@ const UpdateProduct = () => {
         const updatedProduct = { img, name, price, quantity, description };
         console.log(updatedProduct)
 
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://doll-mart-server.vercel.app/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
