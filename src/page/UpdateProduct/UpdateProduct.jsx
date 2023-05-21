@@ -17,6 +17,7 @@ const UpdateProduct = () => {
         const quantity = form.quantity.value;
         const description = form.description.value;
         const updatedProduct = { img, name, price, quantity, description };
+        console.log(updatedProduct)
 
         fetch(`http://localhost:5000/update/${_id}`, {
             method: 'PUT',
@@ -50,25 +51,25 @@ const UpdateProduct = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Toys Name</span>
                         </label>
-                        <input defaultValue={name} name='name' type="text" placeholder="toy name" className="input input-bordered input-secondary w-full" />
+                        <input required defaultValue={name} name='name' type="text" placeholder="toy name" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Toys Photo URL</span>
                         </label>
-                        <input defaultValue={img} name='photo' type="text" placeholder="toy photo URL" className="input input-bordered input-secondary w-full" />
+                        <input required defaultValue={img} name='photo' type="text" placeholder="toy photo URL" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Price</span>
                         </label>
-                        <input defaultValue={price} name='price' type="number" placeholder="price" className="input input-bordered input-secondary w-full" />
+                        <input required defaultValue={price} name='price' type="number" placeholder="price" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Available quantity</span>
                         </label>
-                        <input defaultValue={quantity} name='quantity' type="number" placeholder="quantity" className="input input-bordered input-secondary w-full" />
+                        <input required defaultValue={quantity} name='quantity' type="number" placeholder="quantity" className="input input-bordered input-secondary w-full" />
                     </div>
 
 
@@ -77,7 +78,7 @@ const UpdateProduct = () => {
                     <label className="label">
                         <span className="label-text font-semibold">Toys description</span>
                     </label>
-                    <textarea defaultValue={description} name='description' className="textarea textarea-secondary" placeholder="description"></textarea>
+                    <textarea required defaultValue={description} name='description' className="textarea textarea-secondary" placeholder="description"></textarea>
                 </div>
                 <input type="submit" className='btn bg-pink-600 w-full' value="Update now" />
             </form>

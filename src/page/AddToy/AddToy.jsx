@@ -61,43 +61,43 @@ const AddToy = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Toys Photo URL</span>
                         </label>
-                        <input name='photo' type="text" placeholder="toy photo URL" className="input input-bordered input-secondary w-full" />
+                        <input required name='photo' type="text" placeholder="toy photo URL" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Category</span>
                         </label>
-                        <input name='category' type="text" placeholder="category" className="input input-bordered input-secondary w-full" />
+                        <input required name='category' type="text" placeholder="category" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Price</span>
                         </label>
-                        <input name='price' type="number" placeholder="price" className="input input-bordered input-secondary w-full" />
+                        <input required name='price' type="number" placeholder="price" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Available quantity</span>
                         </label>
-                        <input name='quantity' type="number" placeholder="quantity" className="input input-bordered input-secondary w-full" />
+                        <input required name='quantity' type="number" placeholder="quantity" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Rating</span>
                         </label>
-                        <input name='rating' type="number" placeholder="rating" className="input input-bordered input-secondary w-full" />
+                        <input required name='rating' type="number" placeholder="rating" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Seller Name</span>
                         </label>
-                        <input defaultValue={user.displayName} name='sellerName' type="text" placeholder="seller name" className="input input-bordered input-secondary w-full" />
+                        <input required defaultValue={user.displayName} name='sellerName' type="text" placeholder="seller name" className="input input-bordered input-secondary w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">Seller email</span>
                         </label>
-                        <input defaultValue={user.email} name='sellerEmail' type="email" placeholder="email" className="input input-bordered input-secondary w-full" />
+                        <input required defaultValue={user.email} name='sellerEmail' type="email" placeholder="email" className="input input-bordered input-secondary w-full" />
                     </div>
 
                 </div>
@@ -105,7 +105,7 @@ const AddToy = () => {
                     <label className="label">
                         <span className="label-text font-semibold">Toys description</span>
                     </label>
-                    <textarea name='description' className="textarea textarea-secondary" placeholder="description"></textarea>
+                    <textarea required name='description' className="textarea textarea-secondary" placeholder="description"></textarea>
                 </div>
                 <input type="submit" className='btn bg-pink-600 w-full' value="Add now" />
             </form>

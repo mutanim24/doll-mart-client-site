@@ -21,13 +21,14 @@ const AllToys = () => {
             return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
         });
         setFilteredList(updatedList);
+        event.target.search.value = '';
     };
     return (
         <div>
             <div className='p-10 bg-pink-100 rounded shadow-lg'>
                 <h1 className='text-3xl md:text-5xl font-bold text-pink-600 text-center'>All Toys</h1>
             </div>
-            <form onSubmit={filterBySearch} className='p-6 md:pl-14 md:pt-14'>
+            <form onSubmit={filterBySearch} className='p-6 md:p-0 md:pl-14 md:pt-14'>
                 <input type="text" placeholder="Search doll" name='search' className="input input-bordered input-error w-full max-w-xs" />
                 <input className='btn bg-pink-700 mt-2 md:mt-0 md:ml-3' type="submit" value="Search" />
             </form>
