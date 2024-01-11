@@ -1,0 +1,17 @@
+[
+    {
+        "category": "Boys",
+        "category_img": "https://babystreet.althemist.com/wp-content/uploads/2019/02/banner-boys-home.jpg",
+        "brand_quality": "High"
+    },
+    {
+        "category": "Girls",
+        "category_img": "https://babystreet.althemist.com/wp-content/uploads/2019/02/banner-girls-home.jpg",
+        "brand_quality": "Premium"
+    },
+    {
+        "category": "Toys For Both",
+        "category_img": "https://babystreet.althemist.com/wp-content/uploads/2019/02/banner-toys-home.jpg",
+        "brand_quality": "Top-notch"
+    }
+]

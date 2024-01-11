@@ -15,7 +15,7 @@ const AllToys = () => {
         if(!query){
             return setFilteredList(products)
         }
-        console.log(query)
+        // console.log(query)
         var updatedList = [...filteredList];
         updatedList = updatedList.filter((item) => {
             return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
