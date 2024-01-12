@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const Category = () => {
     const [categories, setCategories] = useState([]);
@@ -9,13 +10,19 @@ const Category = () => {
         .then(data => setCategories(data))
     }, [])
     return (
-        <div>
+        <div className='mt-5'>
+            <SectionTitle
+                title="Doll Types Galore"
+                subtitle="Explore Our Playful Categories and Find the Perfect Doll Match!"
+            ></SectionTitle>
+            <div className='px-10 grid grid-cols-3 gap-3'>
             {
                 categories.map((item, index) => <CategoryCard
                     key={index}
                     category={item}
                 ></CategoryCard>)
             }
+        </div>
         </div>
     );
 };

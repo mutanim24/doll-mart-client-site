@@ -8,6 +8,7 @@ import { useTitle } from '../../../hooks/useTitle';
 import Blogs from '../Blogs/Blogs';
 import NewsLetter from '../NewsLetter/NewsLetter';
 import Category from '../Category/Category';
+import DollMartMagic from '../DollMartMagic/DollMartMagic';
 
 const Home = () => {
     useTitle("Home")
@@ -17,6 +18,7 @@ const Home = () => {
             <Category></Category>
             <Gallery></Gallery>
             <TabSection></TabSection>
+            <DollMartMagic></DollMartMagic>
             <About></About>    
             <Testimonial></Testimonial>
             <Blogs></Blogs>
