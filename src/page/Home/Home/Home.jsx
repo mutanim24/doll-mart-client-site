@@ -9,6 +9,7 @@ import Blogs from '../Blogs/Blogs';
 import NewsLetter from '../NewsLetter/NewsLetter';
 import Category from '../Category/Category';
 import DollMartMagic from '../DollMartMagic/DollMartMagic';
+import CreativeApproach from '../CreativeApproach/CreativeApproach';
 
 const Home = () => {
     useTitle("Home")
@@ -19,7 +20,8 @@ const Home = () => {
             <Gallery></Gallery>
             <TabSection></TabSection>
             <DollMartMagic></DollMartMagic>
-            <About></About>    
+            <About></About> 
+            <CreativeApproach></CreativeApproach>   
             <Testimonial></Testimonial>
             <Blogs></Blogs>
             <NewsLetter></NewsLetter>
