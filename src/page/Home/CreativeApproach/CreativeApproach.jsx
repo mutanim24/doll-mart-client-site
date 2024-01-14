@@ -4,15 +4,15 @@ import kids2 from "../../../assets/kids-2.jpg"
 
 const CreativeApproach = () => {
     return (
-        <div className='flex flex-row px-10 py-16'>
-            <div className='w-6/12 px-16'>
+        <div className='md:flex flex-row px-10 py-16'>
+            <div className='md:w-6/12 md:px-16'>
                 <img className='rounded' src={kids1} alt="" />
             </div>
-            <div className='w-6/12'>
-                <div className='mb-28'>
+            <div className='md:w-6/12'>
+                <div className='my-8 md:my-0 md:mb-16'>
                     <h3 className='text-2xl font-semibold'>CREATIVE APPROACH</h3>
-                    <h1 className='text-[60px] font-bold '>We help you take care of the kids</h1>
-                    <p>Not only do we sell toys, but we also try to make sure that your children are safe playing, learning, and having fun!</p>
+                    <h1 className='text-5xl md:text-[60px] font-bold '>We help you take care of the kids</h1>
+                    <p>ddNot only do we offer an enchanting array of toys, but we are also deeply committed to ensuring the utmost safety for your children as they play, learn, and immerse themselves in pure joy! Not only do we offer an enchanting array of toys, but we are also deeply committed to ensuring the utmost safety for your children as they play, learn, and immerse themselves in pure joy! Dive into a world of endless possibilities with our meticulously curated selection, dedicated to sparking their imagination and nurturing their well-being.</p>
                 </div>
                 <img className='rounded' src={kids2} alt="" />
             </div>

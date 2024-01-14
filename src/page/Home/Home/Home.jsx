@@ -21,9 +21,9 @@ const Home = () => {
             <TabSection></TabSection>
             <DollMartMagic></DollMartMagic>
             <About></About> 
-            <CreativeApproach></CreativeApproach>   
             <Testimonial></Testimonial>
-            <Blogs></Blogs>
+            <CreativeApproach></CreativeApproach>   
+            {/* <Blogs></Blogs> */}
             <NewsLetter></NewsLetter>
         </div>
     );
