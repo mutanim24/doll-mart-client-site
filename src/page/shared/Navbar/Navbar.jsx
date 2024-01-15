@@ -12,19 +12,19 @@ const Navbar = () => {
             .catch(err => { console.log(err.message) })
     }
     const menuBar = <div className='md:flex flex-row'>
-        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/'>Home</NavLink></li>
-        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/all-toys'>All Toys</NavLink></li>
+        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold text-pink-600 mb-0' : ''} to='/'>Home</NavLink></li>
+        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold text-pink-600 mb-0' : ''} to='/all-toys'>All Toys</NavLink></li>
         {
             user && <><li className='font-bold'>
-                <NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/my-toys'>My Toys</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'font-bold text-pink-600 mb-0' : ''} to='/my-toys'>My Toys</NavLink>
             </li>
                 <li className='font-bold'>
-                    <NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/add-toy'>Add Toys</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'font-bold text-pink-600 mb-0' : ''} to='/add-toy'>Add Toys</NavLink>
                 </li>
             </>
         }
 
-        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold border-b-2 border-pink-600 mb-0' : ''} to='/blog'>Blog</NavLink></li>
+        <li className='font-bold'><NavLink className={({ isActive }) => isActive ? 'font-bold text-pink-600 mb-0' : ''} to='/blog'>Blog</NavLink></li>
     </div>
     return (
         <div className="navbar md:px-14">

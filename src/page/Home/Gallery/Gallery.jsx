@@ -33,36 +33,12 @@ const Gallery = () => {
 
 
             <div data-aos="zoom-in" className='p-4 md:p-8 border-dotted rounded border-pink-500 border-8'>
-                {/* <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll1} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll2} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll3} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll4} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll5} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll6} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={doll7} alt="dolls" /></figure>
-                </div>
-                <div className="shadow-xl">
-                    <figure><img className='hover:animate-ping border-pink-600' src={fashion} alt="dolls" /></figure>
-                </div> */}
 
                 <ResponsiveMasonry>
                     <Masonry gutter="10px">
                         {
                             images.map((item, index) => <div>
-                                <img src={item} alt="" />
+                                <img key={index} src={item} alt="" />
                             </div>)
                         }
                     </Masonry>

@@ -15,7 +15,7 @@ const Category = () => {
                 title="Doll Types Galore"
                 subtitle="Explore Our Playful Categories and Find the Perfect Doll Match!"
             ></SectionTitle>
-            <div className='px-10 grid grid-cols-3 gap-3'>
+            <div className='px-10 grid md:grid-cols-3 gap-3'>
             {
                 categories.map((item, index) => <CategoryCard
                     key={index}
