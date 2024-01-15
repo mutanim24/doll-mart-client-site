@@ -32,13 +32,13 @@ const Gallery = () => {
 
 
 
-            <div data-aos="zoom-in" className='p-4 md:p-8 border-dotted rounded border-pink-500 border-8'>
+            <div className='p-4 md:p-8 border-dotted rounded border-pink-500 border-8'>
 
                 <ResponsiveMasonry>
                     <Masonry gutter="10px">
                         {
                             images.map((item, index) => <div>
-                                <img key={index} src={item} alt="" />
+                                <img data-aos="zoom-in" key={index} src={item} alt="" />
                             </div>)
                         }
                     </Masonry>

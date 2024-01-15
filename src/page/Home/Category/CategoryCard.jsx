@@ -2,7 +2,7 @@ import React from 'react';
 
 const CategoryCard = ({ category }) => {
     return (
-        <div style={{ 
+        <div data-aos="zoom-in" style={{ 
             backgroundImage: `url(${category.category_img})`,
             backgroundPosition: 'right',
             backgroundSize: 'cover'
