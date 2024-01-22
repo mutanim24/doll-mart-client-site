@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -9,6 +9,8 @@ import member2 from '../../../assets/mamber-2.jpg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TestimonialCard from './TestimonialCard';
+// import "./Testimonial.css"
 
 
 const Testimonial = () => {
@@ -49,6 +51,13 @@ const Testimonial = () => {
         ]
     };
 
+    const [testimonials, setTestimonial] = useState([]);
+    useEffect(() => {
+        fetch("testimonial.json")
+        .then(res => res.json())
+        .then(data => setTestimonial(data))
+    }, [])
+
     return (
         <div className='my-8 p-4 md:p-14 bg-pink-700 md:flex gap-5 items-center'>
             <div data-aos="zoom-in" className='md:w-4/12 text-center md:text-left text-white space-y-3'>
@@ -59,53 +68,15 @@ const Testimonial = () => {
             <div className='md:w-8/12'>
 
                 <Slider {...settings}>
-                    <div data-aos="zoom-in" className='rounded-2xl shadow-xl m-16 p-12 bg-white'>
-                        <h1 className='text-6xl'>❝</h1>
-                        <p>Looking for the perfect doll to complete your collection? Look no further than DollMart! Our online shop is a doll lover's paradise, offering a wide range of exquisite dolls for every taste and preference.</p>
-                        <div className='flex items-center justify-center gap-3 mt-4'>
-                            <img className='rounded-full w-16 h-16' src={member2} alt="" />
-                            <div>
-                                <h4 className='font-bold'>Tanjil Rahat</h4>
-                                <p>CEO, Tanjil tech</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="zoom-in" className='rounded-2xl shadow-xl m-16 p-12 bg-white'>
-                        <h1 className='text-6xl'>❝</h1>
-                        <p>Looking for the perfect doll to complete your collection? Look no further than DollMart! Our online shop is a doll lover's paradise, offering a wide range of exquisite dolls for every taste and preference.</p>
-                        <div className='flex items-center justify-center gap-3 mt-4'>
-                            <img className='rounded-full w-16 h-16' src={member2} alt="" />
-                            <div>
-                                <h4 className='font-bold'>Tanjil Rahat</h4>
-                                <p>CEO, Tanjil tech</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="zoom-in" className='rounded-2xl shadow-xl m-16 p-12 bg-white'>
-                        <h1 className='text-6xl'>❝</h1>
-                        <p>Looking for the perfect doll to complete your collection? Look no further than DollMart! Our online shop is a doll lover's paradise, offering a wide range of exquisite dolls for every taste and preference.</p>
-                        <div className='flex items-center justify-center gap-3 mt-4'>
-                            <img className='rounded-full w-16 h-16' src={member2} alt="" />
-                            <div>
-                                <h4 className='font-bold'>Tanjil Rahat</h4>
-                                <p>CEO, Tanjil tech</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="zoom-in" className='rounded-2xl shadow-xl m-16 p-12 bg-white'>
-                        <h1 className='text-6xl'>❝</h1>
-                        <p>Looking for the perfect doll to complete your collection? Look no further than DollMart! Our online shop is a doll lover's paradise, offering a wide range of exquisite dolls for every taste and preference.</p>
-                        <div className='flex items-center justify-center gap-3 mt-4'>
-                            <img className='rounded-full w-16 h-16' src={member2} alt="" />
-                            <div>
-                                <h4 className='font-bold'>Tanjil Rahat</h4>
-                                <p>CEO, Tanjil tech</p>
-                            </div>
-                        </div>
-                    </div>
+                    {
+                        testimonials.map((item, index) => <TestimonialCard
+                            key={index}
+                            item={item}
+                        ></TestimonialCard>)
+                    }
                 </Slider>
 
-                {/* <div data-aos="zoom-in" className='rounded-2xl shadow-xl m-16 p-12 bg-white'>
+                {/* <div data-aos="zoom-in" className='rounded-2xl shadow-xl p-12 bg-white'>
                         <h1 className='text-6xl'>❝</h1>
                         <p>Looking for the perfect doll to complete your collection? Look no further than DollMart! Our online shop is a doll lover's paradise, offering a wide range of exquisite dolls for every taste and preference.</p>
                         <div className='flex items-center justify-center gap-3 mt-4'>
@@ -116,7 +87,7 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="zoom-in" className='rounded-2xl shadow-xl m-16 p-12 bg-white md:mt-6'>
+                    <div data-aos="zoom-in" className='rounded-2xl shadow-xl p-12 bg-white md:mt-6'>
                         <h1 className='text-6xl'>❝</h1>
                         <p>Attention all doll enthusiasts! Discover a world of enchantment at DollMart, your ultimate destination for doll shopping. With our exclusive online shop, you can explore a treasure trove of stunning dolls that will captivate your imagination.</p>
                         <div className='flex items-center justify-center gap-3 mt-4'>

@@ -28,12 +28,7 @@ const Gallery = () => {
                 title="Dolls Gallery"
                 subtitle="A Captivating Showcase of Exquisite Dolls"
             ></SectionTitle>
-
-
-
-
-            <div className='p-4 md:p-8 border-dotted rounded border-pink-500 border-8'>
-
+         <div className='p-4 md:p-8 border-dotted rounded border-pink-500 border-8'>
                 <ResponsiveMasonry>
                     <Masonry gutter="10px">
                         {

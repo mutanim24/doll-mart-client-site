@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Alice",
+        "image": "https://images.pexels.com/photos/3823495/pexels-photo-3823495.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "New York, NY",
+        "message": "Looking for the perfect doll to complete your collection? Look no further than DollMart! Our online shop is a doll lover's paradise, offering a wide range of exquisite dolls for every taste and preference."
+    },
+    {
+        "name": "Bob",
+        "image": "https://images.pexels.com/photos/19771925/pexels-photo-19771925/free-photo-of-portrait-of-man-in-black-t-shirt.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Los Angeles, CA",
+        "message": "DollMart is the best place to sell your handmade dolls. They have a loyal customer base, a fair pricing system, and a fast delivery service. I have been working with them for over a year and I am very satisfied with their professionalism and quality."
+    },
+    {
+        "name": "Carol",
+        "image": "https://images.pexels.com/photos/2531553/pexels-photo-2531553.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Chicago, IL",
+        "message": "I love browsing DollMart for new and exciting dolls. They have a huge variety of styles, sizes, and materials. Whether you are looking for a vintage doll, a modern doll, or a custom doll, you will find it at DollMart. They also have great customer service and support."
+    },
+    {
+        "name": "David",
+        "image": "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Houston, TX",
+        "message": "DollMart is my go-to source for doll news and reviews. They always have the latest and greatest dolls in stock, and they provide detailed descriptions and photos of each doll. They also have a blog where they share tips, tricks, and stories about dolls. DollMart is a must-visit for any doll fan."
+    },
+    {
+        "name": "Eve",
+        "image": "https://images.pexels.com/photos/804009/pexels-photo-804009.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Philadelphia, PA",
+        "message": "DollMart is a wonderful platform for doll artists like me. They allow me to showcase my unique and creative dolls to a wide audience, and they handle all the logistics of selling and shipping. They also give me feedback and suggestions on how to improve my craft. DollMart is a great partner for doll artists."
+    },
+    {
+        "name": "Frank",
+        "image": "https://images.pexels.com/photos/1270076/pexels-photo-1270076.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Phoenix, AZ",
+        "message": "DollMart is a treasure trove for doll collectors and enthusiasts. They have a curated collection of rare and valuable dolls, as well as a selection of affordable and accessible dolls. They also have a history section where they share the stories and origins of each doll. DollMart is a doll museum and a doll shop in one."
+    }
+]
